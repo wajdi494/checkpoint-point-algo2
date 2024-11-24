@@ -1,0 +1,18 @@
+ALGORITHM insertion_sort
+VAR
+    tab : ARRAY_OF INTEGER[50];
+    i,j:INTEGER;
+    n:INTEGER:=tab.length;
+    key:INTEGER
+BEGIN
+FOR i FROM 1 TO n-1   DO
+    key:=tab[i]
+    j:=i-1
+    WHILE (key>tab[j] AND j>0) DO
+       tab[j+1]=tab[j] 
+       j=j-1
+    END_WHILE
+    tab[j+1]=key
+END_FOR
+    write(tab)
+END
